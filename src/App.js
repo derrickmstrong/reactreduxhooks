@@ -1,14 +1,24 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { actionCreators } from './store/index'
 
 const App = () => {
     const account = useSelector((state) => state.account)
-    console.log('Account:', account)
+    // console.log('Account:', account)
+
+    const dispatch = useDispatch()
+
+    const { depositMoney, withdrawMoney } = bindActionCreators(actionCreators, dispatch)
+    console.log('ActionCreators', depositMoney, withdrawMoney)
+
     return (
-        <div>
-            Account Balance: {account}
-        </div>
-    )
+      <div>
+        <h1>{account}</h1>
+        <button onClick={()=>depositMoney(5)}>Deposit</button>
+        <button onClick={()=>withdrawMoney(5)}>Withdraw</button>
+      </div>
+    );
 }
 
 export default App
