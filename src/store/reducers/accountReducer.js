@@ -1,10 +1,10 @@
-import { DEPOSIT, WITHDRAW } from '../actionTypes';
+import * as ActionType from '../actionTypes';
 
 const accountReducer = (state = 0, action) => {
   switch (action.type) {
-    case DEPOSIT:
+    case ActionType.DEPOSIT:
       return state + action.payload;
-    case WITHDRAW:
+    case ActionType.WITHDRAW:
       return state - action.payload;
     default:
       return state;
