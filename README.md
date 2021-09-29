@@ -20,42 +20,44 @@ Install all dependencies
 
 ### `Setup store file structure`
 
-store
-    actions
+###
+`store
+    actions >
         index.js
-    actionTypes
+    actionTypes >
         index.js
-    reducers
+    reducers >
         accountReducer.js
         index.js (rootreducer)
 index.js (export * as actionCreators from ./actions)
-store.js
+store.js`
+###
 
-### Create action types
-
-
-### Create individual reducers
+### `Create action types`
 
 
-### Combine multiple reducers (rootReducer)
+### `Create individual reducers`
 
 
-### Update store by adding action creators
+### `Combine multiple reducers (rootReducer)`
 
 
-### Create store.js
+### `Update store by adding action creators`
 
 
-### Apply Redux Thunk middleware to store.js
+### `Create store.js`
 
 
-### Wrap store around app with Provider at root index.js
+### `Apply Redux Thunk middleware to store.js`
 
 
-### Test/Access state with useSelector
+### `Wrap store around app with Provider at root index.js`
 
 
-### Test/Dispatch action creators with useDispatch and bindActionCreators 
+### `Test/Access state with useSelector`
+
+
+### `Test/Dispatch action creators with useDispatch and bindActionCreators` 
 
 
 ## Congrats! You got yourself a React/Redux app with Hooks.
